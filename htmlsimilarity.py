@@ -8,9 +8,9 @@
 import sys
 import logging
 
-from Applications.common.HTMLSimilarity.htmlparser import HTMLParser
-from Applications.common.HTMLSimilarity.domtree2data import Converter
-from Applications.common.HTMLSimilarity.calc import calculated_similarity
+from libs.HTMLSimilarity.htmlparser import HTMLParser
+from libs.HTMLSimilarity.domtree2data import Converter
+from libs.HTMLSimilarity.calc import calculated_similarity
 
 
 logging.basicConfig(stream=sys.stdout, format="%(levelname)s: %(asctime)s: %(message)s", level=logging.INFO, datefmt='%a %d %b %Y %H:%M:%S')
