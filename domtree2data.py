@@ -5,7 +5,7 @@
 @file: domtree2data.py
 @time: 2019-07-03 14:47
 """
-
+import hashlib
 
 class Converter:
     def __init__(self, dom_tree, dimension):
@@ -36,7 +36,7 @@ class Converter:
 
     @staticmethod
     def feature_hash(node_feature):
-        return abs(hash(node_feature)) % (10 ** 8)
+        return abs(int(hashlib.md5(node_feature.encode("utf8")).hexdigest(), 16)) % (10 ** 8)
 
     def calculate_weight(self, node, node_id, feature_hash):
         brother_node_count = 0
